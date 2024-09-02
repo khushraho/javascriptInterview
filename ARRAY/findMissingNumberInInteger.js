@@ -15,26 +15,26 @@
 // }
 // console.log(missingValue(arrNumber));
 
-/**
- * !Example8:-how to find the missing number in a given integer array of 1 to 10:-
- */
-// const arrNumber = [1, 2, 3, 4, 6, 8, 10];
+//// !Example8:-how to find the missing number in a given integer array of 1 to 10:-
 
-// // Calculate the expected range of numbers
-// const minNumber = Math.min(...arrNumber);
-// const maxNumber = Math.max(...arrNumber);
+const arrNumber1 = [ 2, 4, 6, 8, 11,12,14];
 
-// // Generate an array of expected numbers in the range
-// const expectedRange = Array.from(
-//   { length: maxNumber - minNumber + 1 },
-//   (index) => minNumber + index
-// );
+// Calculate the expected range of numbers
+const minNumber = Math.min(...arrNumber1);
+const maxNumber = Math.max(...arrNumber1);
+console.log(minNumber,"...minNumber");
+console.log(maxNumber,"....maxNumber");
 
-// console.log(expectedRange, "............");
-// // Find the missing numbers
-// const missingNumbers = expectedRange.filter((num) => !arrNumber.includes(num));
+const expectedRange = Array.from(
+  { length: (maxNumber - minNumber) + 1 },
+  (v,index) => minNumber + index
+);
 
-// console.log("Missing Numbers:", missingNumbers);
+// console.log(expectedRange, "............expectedRange");
+
+// const missingNumbers = expectedRange.filter((num) => !arrNumber1.includes(num));
+
+// console.log(missingNumbers,".........Missing Numbers");
 
 /**
  * !Example8:-how to find the missing number in a given integer array of 1 to 10:-

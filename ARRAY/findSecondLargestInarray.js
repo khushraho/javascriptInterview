@@ -9,22 +9,21 @@
  **/
 
 // /**
-// *!Example:-
-// */
+// *!Example:- function*/
 // const intArray=[2,8,9,7,3,47,45,56,7,89,5,6,7];
 // const largestValue=(arr)=>{
 //   let firstLargestValue=Math.max(...arr)
 //   var index =arr.indexOf(firstLargestValue)
-//   console.log(index);
+//   console.log(index,".....index");
 //   arr.splice(index,1)
+//   console.log(arr,".........spliceArray");
 //   let SecondLargestValue=Math.max(...arr)
 //     return (SecondLargestValue)
 // }
 // console.log(largestValue(intArray));
 
 // /**
-//  *!Example:-
-//  */
+//  *!Example:- normally*/
 // const intArray = [ 2, 3, 47, 45, 56, 7, 89, 5, 6, 7];
 
 // let firstLargestValue = Math.max(...intArray);
@@ -45,7 +44,7 @@
 //   arr.splice(index1,1)
 //   let secondLargestValue=Math.max(...arr);
 //   const index2 =arr.indexOf(secondLargestValue)
-//   console.log(index1,".........index2");
+//   console.log(index2,".........index2");
 //   arr.splice(index2,1)
 
 //   let thirdLargestValue=Math.max(...arr)
@@ -70,13 +69,6 @@
 // let thirdLargestValue = Math.max(...intArray);
 // console.log(thirdLargestValue);
 
-/**
- *!Example:-
- */
-// const intArray=[2,8,9,7,3,47,45,56,7,89,5,6,7];
-// const arr=Math.max(...intArray)
-// console.log(arr);
-// console.log(intArray);
 
 /**
  *!Example:-
@@ -84,11 +76,12 @@
 const inputArray = ['45', '19', '9', '8', '8', '7', '1'];
 
 // Convert string numbers to actual numbers
-const arrNumbers = inputArray.map(Number);
+const arrNumbers = inputArray.map(x=>Number(x));
+console.log(arrNumbers,"......arrNumbers");
 
 // Remove duplicates and sort the array in descending order
 const sortedUniqueNumbers = [...new Set(arrNumbers)].sort((a, b) => b - a);
-
+console.log(sortedUniqueNumbers,"...........sortedUniqueNumbers");
 // Check if there is a second-largest element
 const secondLargest = sortedUniqueNumbers[1];
 console.log(typeof secondLargest); //numbers
